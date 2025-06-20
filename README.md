@@ -58,7 +58,7 @@ python roblox_version_checker.py generate-json
 
 If an error resulted from this, verify your python installation or repair files from the GitHub.
 
-Note that data from version-9bf2d7ce6a0345d5 is already present in the public/data.json file, so you can skip this step if you're using that version.
+Note that data from **version-9bf2d7ce6a0345d5** is already present in the public/data.json file, so you can skip this step if you're using that version.
 
 ### 2. Run the Local Server
 
