@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --primary-color: #9b59b6;
+    --primary-hover-color: #8e44ad;
+    --text-color: #e0e0e0;
+    --text-muted-color: #a0a0a0;
+    --border-color: #2c2c2c;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* Custom purple cursor */
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%239b59b6" d="M12.7,17.77a.93.93,0,0,1-.58-.16l-3.3-2.3a.94.94,0,0,1,0-1.58l9.64-6.68a.94.94,0,0,1,1.3.26.94.94,0,0,1-.26,1.3L13.11,15.3,16,18.2a.94.94,0,0,1-.26,1.3.92.92,0,0,1-1.05.08A1,1,0,0,1,12.7,17.77Z" opacity=".95"/><path fill="%23FFFFFF" d="M12.91,15.2,19,9.39a.94.94,0,0,0-.26-1.3.94.94,0,0,0-1.3.26L7.8,15.05a.94.94,0,0,0,0,1.58l3.3,2.3a.93.93,0,0,0,.58.16,1,1,0,0,0,.71-1.63L9.61,15l3.3-2.29Z" opacity=".9"/></svg>'), auto;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%238e44ad" d="M12.7,17.77a.93.93,0,0,1-.58-.16l-3.3-2.3a.94.94,0,0,1,0-1.58l9.64-6.68a.94.94,0,0,1,1.3.26.94.94,0,0,1-.26,1.3L13.11,15.3,16,18.2a.94.94,0,0,1-.26,1.3.92.92,0,0,1-1.05.08A1,1,0,0,1,12.7,17.77Z" opacity=".95"/><path fill="%23FFFFFF" d="M12.91,15.2,19,9.39a.94.94,0,0,0-.26-1.3.94.94,0,0,0-1.3.26L7.8,15.05a.94.94,0,0,0,0,1.58l3.3,2.3a.93.93,0,0,0,.58.16,1,1,0,0,0,.71-1.63L9.61,15l3.3-2.29Z" opacity=".9"/></svg>'), pointer;
+}
+
+a:hover {
+    color: var(--primary-hover-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+header .note {
+    font-family: monospace;
+    background: var(--surface-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    color: var(--text-muted-color);
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.category {
+    margin-bottom: 2.5rem;
+}
+
+.category h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.card p {
+    font-size: 1rem;
+    word-wrap: break-word;
+    color: var(--text-color);
+    cursor: text;
+}
+
+footer {
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.loader-container {
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--text-muted-color);
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--surface-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+#error-container {
+    text-align: center;
+    background-color: var(--surface-color);
+    border: 1px solid #c0392b;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+#error-container h2 {
+    color: #e74c3c;
+}
+
+#error-container p {
+    margin-top: 0.5rem;
+}
+
+#error-container code {
+    background: var(--bg-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    color: var(--primary-color);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
