@@ -54,3 +54,32 @@ To populate the web UI, you must first fetch the data from the WEAO API. Run the
 
 ```bash
 python roblox_version_checker.py generate-json
+```
+
+If an error resulted from this, verify your python installation or repair files from the GitHub.
+
+Note that data from version-9bf2d7ce6a0345d5 is already present in the public/data.json file, so you can skip this step if you're using that version.
+
+### 2. Run the Local Server
+
+To run the local server, navigate to the project directory and run the following command:
+
+```bash
+python -m http.server --directory public 8000
+```
+
+This will start a local server on port 8000 and serve the files from the `public` directory.
+
+### 3. Access the Web UI
+
+Open your web browser and navigate to `http://localhost:8000` to view the web UI.
+
+### Updating Web UI
+
+To update the web UI, run the following command in your terminal:
+
+```bash
+python roblox_version_checker.py generate-json
+```
+
+This will update the data for the web UI.
